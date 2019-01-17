@@ -26,24 +26,24 @@ if x["cod"] != "404":
 	weather description: 'Clear', 'Mist', 'Drizzle', 'Snow', 'Thunderstorm'
 	'''
 	if str(weather_description) == 'Drizzle':
-		os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/rainy.jpg"'""")
+		os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../rainy.jpg"'""")
 	
 	elif str(weather_description) == 'Thunderstorm':
-		os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/thunderstorm.jpg"'""")
+		os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../thunderstorm.jpg"'""")
 
 	elif str(weather_description) == 'Snow':
 		if now.hour >= 0 and now.hour <=18:
-			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/snow_morning.jpg"'""")
+			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../snow_morning.jpg"'""")
 		elif now.hour > 18 and now.hour <=23:
-			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/snow_night.jpg"'""")
+			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../snow_night.jpg"'""")
 
 	elif str(weather_description) == 'Clear': 
 		if now.hour > 18 and now.hour <=23:
-			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/clear_night.jpg"'""")
+			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../clear_night.jpg"'""")
 		elif now.hour > 15 and now.hour <=18:
-			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/clear_evening.jpg"'""")
+			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../clear_evening.jpg"'""")
 		elif now.hour >= 0 and now.hour <=15:
-			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/amitnaik/Pictures/Camera Roll/Weather/clear_morning.jpg"'""")
+			os.system("""osascript -e 'tell application "Finder" to set desktop picture to POSIX file "../clear_morning.jpg"'""")
 
 else: 
-	print(" City Not Found ") 
+	print(" City not found ") 
